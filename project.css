@@ -1,0 +1,105 @@
+body {
+  color: #000000;
+  background-color: #EAEAEA;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header { 
+  color: #FFFFFF;
+  background-color: #17671b;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav {
+  text-align: right;
+  font-weight: bold;
+  font-size: 100%;
+  padding: 0.6em; 
+  color: darkgreen;
+  text-decoration: none;
+  background: #f7fff7; 
+  border: 2px solid #cfe8cf; 
+  border-radius: 12px; 
+  display: block; 
+  max-width: calc(100% - 2em); 
+  margin: 0.5em auto 0.5em 0; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08); 
+}
+
+nav ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0.2em 0.4em; 
+  display: flex; 
+  gap: 1em; 
+  justify-content: flex-end;  
+  flex-wrap: nowrap;
+  overflow-x: auto; 
+}
+
+nav li {
+  display: inline-block; 
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.2em 0.4em;
+}
+
+h2 { color: #0f6507;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+
+p{ font-family: Georgia, 'Times New Roman', Times, serif;
+}
+table{ 
+  border: 1px solid #0f6507;
+  border-collapse: collapse;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #9dcdad;
+}
+
+th{ 
+  border: 2px solid #0f6507;
+  padding: 0.5em;
+}
+
+ td {
+  border: 2px solid #0f6507;
+  padding: 0.5em;
+  text-align: center;
+}
+
+td.text { 
+text-align: left;
+  }
+
+
+  form{
+  width: 60%;
+  max-width: 30em;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr;
+}
+
+input{
+margin-bottom: 0.5em;
+}
+
+textarea{
+margin-bottom: 0.5em;
+}
+footer {
+  font-size: 75%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  background-color: #17671b;
+  padding: 0.2em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
