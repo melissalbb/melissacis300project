@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>South of France Guide</title>
+  <link rel="stylesheet" href="project.css">
+  <style>
+    .hero {
+      position: relative;
+      height: 550px;
+      overflow: hidden;
+      text-align: center;
+      color: white;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+      filter: brightness(80%);
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(253, 246, 236, 0.85);
+      padding: 25px 35px;
+      border-radius: 12px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #3a3a3a;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .hero-text h2 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #606c38;
+    }
+
+    .hero-text p {
+      font-family: 'Lora', serif;
+      font-size: 1.1em;
+      color: #4a4a4a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>South of France Guide</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="planner.html">Trip Planner</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="video south of france.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-text">
+      <h2>Discover the Charm of the South of France</h2>
+      <p>Plan your perfect getaway with our curated destinations and trip planner.</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h2>Explore Destinations</h2>
+      <p>From glamorous beaches to medieval villages, discover the best spots.</p>
+      <a href="destinations.html" class="btn">View Destinations</a>
+    </div>
+    <div class="feature">
+      <h2>Plan Your Trip</h2>
+      <p>Create your own itinerary or choose from ready-made road trips.</p>
+      <a href="planner.html" class="btn">Start Planning</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 South of France Guide | Designed with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

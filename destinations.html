@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destinations - South of France Guide</title>
+  <link rel="stylesheet" href="project.css">
+  <style>
+    .card {
+      position: relative;
+      background: #fff;
+      width: 30%;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card h3 {
+      color: #606c38;
+      font-family: 'Playfair Display', serif;
+      margin-top: 15px;
+    }
+
+    .card p {
+      font-family: 'Lora', serif;
+      padding: 0 20px 25px;
+      color: #333;
+      text-align: justify;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px;
+      gap: 20px;
+    }
+
+    .destinations-table {
+      margin: 60px auto;
+      max-width: 900px;
+      background: #fffaf0;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .destinations-table h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+      color: #3b3b3b;
+    }
+
+    .destinations-table table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Lora', serif;
+      text-align: left;
+    }
+
+    .destinations-table th {
+      background-color: #606c38;
+      color: white;
+      padding: 12px;
+      border-bottom: 3px solid #ccc;
+    }
+
+    .destinations-table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .destinations-table tr:hover {
+      background-color: #f6f6f6;
+    }
+
+    .plan-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 25px;
+      background-color: #606c38;
+      color: white;
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+      text-align: center;
+      width: fit-content;
+    }
+
+    .plan-btn:hover {
+      background-color: #8ba157;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>South of France Guide</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="destinations.html" class="active">Destinations</a></li>
+        <li><a href="planner.html">Trip Planner</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-title">
+    <h2>Destinations</h2>
+  </section>
+
+  <main class="content">
+    <div class="card">
+      <img src="nice2.jpg" alt="Nice">
+      <h3>Nice</h3>
+      <p>Nice, the capital of the French Riviera, blends Mediterranean charm with artistic heritage. From the Promenade des Anglais to the colorful Old Town, it’s a paradise for beach lovers and art enthusiasts alike. Visit the Matisse Museum, taste local specialties like Socca, and admire the sunset over the Baie des Anges.</p>
+    </div>
+
+    <div class="card">
+      <img src="marseille.jpg" alt="Marseille">
+      <h3>Marseille</h3>
+      <p>France’s oldest city, Marseille, offers a vibrant mix of cultures and stunning seaside views. Explore the Old Port, wander through the narrow alleys of Le Panier, and don’t miss the Calanques National Park for breathtaking hikes and turquoise coves. Its lively markets and fresh seafood make it a must for food lovers.</p>
+    </div>
+
+    <div class="card">
+      <img src="cannes.jpg" alt="Cannes">
+      <h3>Cannes</h3>
+      <p>Known for its world-famous Film Festival, Cannes is synonymous with glamour and elegance. Stroll along La Croisette, relax at golden beaches, or take a ferry to the peaceful Îles de Lérins. With luxury boutiques, fine dining, and cinematic charm, Cannes captures the essence of the Riviera lifestyle.</p>
+    </div>
+
+    <div class="card">
+      <img src="monaco.jpg" alt="Monaco">
+      <h3>Monaco</h3>
+      <p>The glamorous principality of Monaco is famed for its luxury, casinos, and panoramic views of the Mediterranean. Visit the Prince’s Palace, the Oceanographic Museum, or watch the Formula 1 Grand Prix from a café terrace. Despite its small size, Monaco’s elegance and energy make it unforgettable.</p>
+    </div>
+
+    <div class="card">
+      <img src="st tropez.jpg" alt="Saint-Tropez">
+      <h3>Saint-Tropez</h3>
+      <p>Once a quiet fishing village, Saint-Tropez has become an icon of French chic. Famous for its golden beaches, stylish boutiques, and lively nightlife, it remains effortlessly charming. Stroll through the old port, enjoy a Tarte Tropézienne at a café, or dance the night away by the sea.</p>
+    </div>
+
+    <div class="card">
+      <img src="aix.jpg" alt="Aix-en-Provence">
+      <h3>Aix-en-Provence</h3>
+      <p>Aix-en-Provence is a city of fountains, art, and light. Birthplace of painter Paul Cézanne, it’s filled with history and beauty. Walk along Cours Mirabeau under plane trees, visit colorful markets, and explore nearby vineyards. Every corner feels like a painting come to life.</p>
+    </div>
+
+    <div class="card">
+      <img src="avignon.jpg" alt="Avignon">
+      <h3>Avignon</h3>
+      <p>Avignon, the City of Popes, is a medieval masterpiece. Discover the majestic Palais des Papes, walk across the famous Pont d’Avignon, and enjoy summer festivals filled with art and theater. Its narrow cobbled streets and historic charm make it a step back in time.</p>
+    </div>
+
+    <div class="card">
+      <img src="antibes.jpg" alt="Antibes">
+      <h3>Antibes</h3>
+      <p>Antibes offers the perfect blend of relaxation and culture. Visit the Picasso Museum, walk along the ramparts with views of the sea, and browse the bustling Provençal market. With sandy beaches and a charming old town, it’s a Riviera favorite for travelers seeking authenticity and beauty.</p>
+    </div>
+  </main>
+
+  <section class="destinations-table">
+    <h3>Compare Top Destinations</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>City</th>
+          <th>Main Attraction</th>
+          <th>Known For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Nice</td><td>Promenade des Anglais</td><td>Beaches & Art Museums</td></tr>
+        <tr><td>Cannes</td><td>La Croisette</td><td>Film Festival & Luxury Shopping</td></tr>
+        <tr><td>Marseille</td><td>Old Port</td><td>Seafood & Multicultural Vibe</td></tr>
+        <tr><td>Monaco</td><td>Prince’s Palace & Casino Square</td><td>Luxury, Cars & Panoramic Views</td></tr>
+        <tr><td>Saint-Tropez</td><td>Pampelonne Beach</td><td>Nightlife & Celebrities</td></tr>
+        <tr><td>Aix-en-Provence</td><td>Cours Mirabeau</td><td>Fountains, Markets & Art</td></tr>
+        <tr><td>Avignon</td><td>Palais des Papes</td><td>Medieval Architecture & Festivals</td></tr>
+        <tr><td>Antibes</td><td>Picasso Museum</td><td>Old Town & Coastal Fort</td></tr>
+      </tbody>
+    </table>
+
+    <a href="planner.html" class="plan-btn">Start Planning Your Trip</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 South of France Guide</p>
+  </footer>
+</body>
+</html>
