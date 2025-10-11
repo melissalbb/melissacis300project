@@ -1,0 +1,817 @@
+/* ---------- GLOBAL ---------- */
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background: #fefae0;
+  color: #1d1d1d;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: #606c38; /* Olive green */
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  border-bottom: 2px solid #e9f5e1;
+}
+
+/* ---------- HERO SLIDESHOW ---------- */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.slideshow {
+  position: relative;
+  max-height: 550px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  filter: brightness(85%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(253, 246, 236, 0.85);
+  padding: 25px 35px;
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #3a3a3a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.hero-text h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  color: #606c38;
+}
+
+.hero-text p {
+  font-family: 'Lora', serif;
+  font-size: 1.1em;
+  color: #4a4a4a;
+}
+
+/* ---------- FEATURES ---------- */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  background: #ccd5ae;
+}
+
+.feature {
+  width: 40%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature h2 {
+  color: #606c38;
+  font-family: 'Playfair Display', serif;
+}
+
+.btn {
+  display: inline-block;
+  background: #cce3d1;
+  color: #1d1d1d;
+  padding: 12px 24px;
+  margin-top: 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #606c38;
+  color: white;
+}
+
+/* ---------- DESTINATION CARDS ---------- */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.card {
+  background: #fff;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px;
+  font-family: 'Playfair Display', serif;
+  color: #606c38;
+}
+
+.card p {
+  padding: 0 15px 20px;
+}
+
+/* ---------- FORM ---------- */
+form {
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea,
+form button {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #606c38;
+  color: white;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+form button:hover {
+  background: #e9f5e1;
+  color: #1d1d1d;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #606c38;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+.about-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #606c38;
+}
+
+.about-section p {
+  font-family: 'Lora', serif;
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #3a3a3a;
+  margin-bottom: 25px;
+}
+
+/* ---------- CARD SLIDESHOW ---------- */
+.card-slideshow {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-slide.active {
+  opacity: 1;
+}
+
+/* ---------- UNIFIED PAGE TITLE ---------- */
+.page-title,
+.page-title h2 {
+  display: inline-block;
+  background: #606c38; /* Olive green */
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  padding: 20px 50px;
+  border-radius: 0 60px 60px 0;
+  margin: 50px 0 30px 60px;
+  box-shadow: 5px 7px 18px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+}
+
+.page-title h2 {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+/* ---------- PLANNER LAYOUT ---------- */
+.planner-wrap {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto 10px;
+  padding: 0 20px;
+}
+
+.planner-panel,
+.planner-side {
+  width: 100%;
+}
+
+.planner-heading {
+  font-family: 'Playfair Display', serif;
+  color: #606c38;
+  margin: 10px 0 15px;
+}
+
+/* ---------- FORM LAYOUT ---------- */
+.planner-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.field {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+}
+
+label {
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  display: block;
+  color: #3c4a1a;
+}
+
+input[type='date'],
+input[type='number'],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
+  background: rgba(255, 250, 240, 0.9);
+  font-family: 'Lora', serif;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+input[type='date']:focus,
+input[type='number']:focus,
+select:focus {
+  border-color: #606c38;
+  outline: none;
+  box-shadow: 0 0 8px rgba(96, 108, 56, 0.4);
+}
+
+/* ---------- CHIPS ---------- */
+.chips label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 10px 0 0;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e9f5e1;
+  border: 1px solid #ccd5ae;
+  cursor: pointer;
+}
+
+.chips input {
+  accent-color: #606c38;
+}
+
+/* ---------- EXTERNAL LINKS ---------- */
+.external-links .link-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.external-links a {
+  display: inline-block;
+  background: #cce3d1;
+  color: #1d1d1d;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.external-links a:hover {
+  background: #606c38;
+  color: #fff;
+}
+
+.hint {
+  color: #6b6b6b;
+  font-size: 0.9em;
+}
+
+/* ---------- BUTTONS ---------- */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #606c38;
+  color: #606c38;
+}
+
+.btn-outline:hover {
+  background: #606c38;
+  color: #fff;
+}
+
+/* ---------- RIGHT PANEL ---------- */
+.card-soft {
+  background: #fffef6;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 18px 18px 8px;
+  margin-bottom: 16px;
+}
+
+.pretty-list {
+  margin: 0 0 10px 16px;
+}
+
+.pill {
+  background: #f4e1d2;
+  border: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.pill:hover {
+  background: #e6d0bf;
+}
+
+/* ---------- ITINERARY / SCHEDULE LAYOUT ---------- */
+.itinerary {
+  max-width: 1000px;
+  margin: 40px auto 80px;
+  padding: 20px;
+  background: #fffdf5;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== SCHEDULE STYLE ========== */
+.schedule {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Lora', serif;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e9e9e9;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.day-label {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #606c38;
+  font-size: 1.4em;
+}
+
+.date-label {
+  color: #777;
+  font-size: 0.95em;
+}
+
+.schedule-section h5 {
+  font-family: 'Playfair Display', serif;
+  color: #606c38;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.schedule-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 12px;
+}
+
+.schedule-section li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.schedule-section .time {
+  font-weight: bold;
+  width: 60px;
+  color: #3c4a1a;
+}
+
+.travel-day {
+  background: #f9f7ec;
+  border: 2px dashed #d4cfb8;
+}
+
+.it-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.it-header h3 {
+  font-family: 'Playfair Display', serif;
+  color: #606c38;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.it-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.it-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.it-day {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: stretch;
+  background: #fffaf0;
+  border-left: 8px solid #606c38;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 15px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.it-day:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.it-day .meta {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #606c38;
+  font-size: 1.1em;
+  border-right: 1px solid #ccd5ae;
+  padding-right: 15px;
+  text-align: center;
+  align-self: center;
+}
+
+.it-day-content {
+  padding-left: 20px;
+}
+
+.it-day-content h4 {
+  font-family: 'Playfair Display', serif;
+  color: #3a3a3a;
+  margin: 0 0 6px;
+  font-size: 1.3em;
+}
+
+.it-day-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.it-day-content li {
+  font-family: 'Lora', serif;
+  font-size: 1em;
+  padding: 4px 0;
+  border-bottom: 1px dashed #e0e0e0;
+  color: #4a4a4a;
+}
+
+/* ---------- ITINERARY SCHEDULE FORMAT ---------- */
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 80px auto; /* Time | Description */
+  align-items: start;
+  gap: 12px;
+  font-family: 'Lora', serif;
+  font-size: 1em;
+  color: #1d1d1d;
+}
+
+.schedule-time {
+  font-weight: 700;
+  color: #606c38;
+}
+
+.schedule-text {
+  line-height: 1.5;
+}
+
+/* Headings for morning, afternoon, evening */
+.schedule-section {
+  margin-top: 12px;
+  font-weight: 700;
+  color: #606c38;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1em;
+  border-top: 1px solid #e0e0c0;
+  padding-top: 8px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1000px) {
+  .planner-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-title {
+    font-size: 1.8em;
+    padding: 14px 30px;
+    border-radius: 0 40px 40px 0;
+    margin-left: 30px;
+  }
+}
+
+/* ---------- RESET BUTTON ---------- */
+#resetPageBtn {
+  border-color: #b54d4d;
+  color: #b54d4d;
+}
+
+#resetPageBtn:hover {
+  background: #b54d4d;
+  color: #fff;
+}
+
+/* ---------- BOOKING WINDOWS (SIDE-BY-SIDE) ---------- */
+.booking-windows {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.booking-section {
+  text-align: center;
+}
+
+.booking-section h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+}
+
+.booking-frame {
+  width: 100%;
+  height: 450px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fffdf5;
+}
+
+.fallback {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 8px;
+}
+
+@media (max-width: 1000px) {
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ---------- CONTACT INTRO ---------- */
+.contact-intro {
+  text-align: center;
+  margin-top: -20px; /* pulls it closer to title */
+  margin-bottom: 40px;
+}
+
+.contact-intro p {
+  font-family: 'Lora', serif;
+  font-size: 1.3em;
+  color: #3a3a3a;
+  font-weight: 500;
+}
+/* ---------- DESTINATIONS TABLE ---------- */
+.destinations-table {
+  margin: 60px auto;
+  max-width: 900px;
+  background: #fffaf0;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.destinations-table h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  color: #3b3b3b;
+}
+
+.destinations-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Lora', serif;
+  text-align: left;
+}
+
+.destinations-table th {
+  background-color: #606c38;
+  color: white;
+  padding: 12px;
+  border-bottom: 3px solid #ccc;
+}
+
+.destinations-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.destinations-table tr:hover {
+  background-color: #f6f6f6;
+}
+@media (max-width: 700px) {
+  .destinations-table table, 
+  .destinations-table thead, 
+  .destinations-table tbody, 
+  .destinations-table th, 
+  .destinations-table td, 
+  .destinations-table tr {
+    display: block;
+  }
+
+  .destinations-table tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .destinations-table td {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+  }
+
+  .destinations-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #606c38;
+  }
+}
+.email {
+  color: #2a6f97;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.email {
+  color: #2a6f97;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fffaf0;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Lora', serif;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #606c38;
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  color: #333;
+}

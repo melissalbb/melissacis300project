@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trip Planner - South of France Guide</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+  <header>
+    <h1>South of France Guide</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="planner.html" class="active">Trip Planner</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-title">
+    <h2>Planner</h2>
+  </section>
+
+  <main class="planner-wrap">
+    <section class="planner-panel">
+      <h3 class="planner-heading">Customize Your Journey</h3>
+
+      <form id="plannerForm" class="planner-form" onsubmit="return false;">
+        <div class="field-row">
+          <div class="field">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" required />
+          </div>
+
+          <div class="field">
+            <label for="days">Number of Days</label>
+            <input type="number" id="days" min="2" max="30" value="7" required />
+          </div>
+
+          <div class="field">
+            <label for="travelers">Travelers</label>
+            <input type="number" id="travelers" min="1" value="2" />
+          </div>
+
+          <div class="field">
+            <label for="pace">Pace</label>
+            <select id="pace">
+              <option value="relaxed">Relaxed</option>
+              <option value="balanced" selected>Balanced</option>
+              <option value="packed">See-it-all</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Destinations (pick at least 2)</label>
+          <div class="chips">
+            <label><input type="checkbox" class="city" value="Nice" checked /> Nice</label>
+            <label><input type="checkbox" class="city" value="Cannes" /> Cannes</label>
+            <label><input type="checkbox" class="city" value="Antibes" /> Antibes</label>
+            <label><input type="checkbox" class="city" value="Monaco" /> Monaco</label>
+            <label><input type="checkbox" class="city" value="Saint-Tropez" /> Saint-Tropez</label>
+            <label><input type="checkbox" class="city" value="Marseille" /> Marseille</label>
+            <label><input type="checkbox" class="city" value="Aix-en-Provence" /> Aix-en-Provence</label>
+            <label><input type="checkbox" class="city" value="Avignon" /> Avignon</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Interests</label>
+          <div class="chips">
+            <label><input type="checkbox" class="interest" value="beach" checked /> Beaches</label>
+            <label><input type="checkbox" class="interest" value="culture" /> Culture & Museums</label>
+            <label><input type="checkbox" class="interest" value="food" /> Food & Wine</label>
+            <label><input type="checkbox" class="interest" value="scenery" /> Scenic Views</label>
+            <label><input type="checkbox" class="interest" value="markets" /> Markets & Shopping</label>
+            <label><input type="checkbox" class="interest" value="adventure" /> Adventure / Boats</label>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="budget">Budget (avg per day, per person)</label>
+            <select id="budget">
+              <option value="$$">$$ (Smart)</option>
+              <option value="$$$" selected>$$$ (Comfort)</option>
+              <option value="$$$$">$$$$ (Luxury)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="car">Transport</label>
+            <select id="car">
+              <option value="train">Train / Transit</option>
+              <option value="car" selected>Rental Car</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field external-links">
+          <h4>Book the Essentials</h4>
+          <div class="link-grid">
+            <a id="flightsLink" target="_blank" rel="noopener">Google Flights ↗</a>
+            <a id="hotelsLink" target="_blank" rel="noopener">Hotels.com ↗</a>
+            <a id="activitiesLink" target="_blank" rel="noopener">Tours & Activities ↗</a>
+          </div>
+          <small class="hint">
+            Links open with your dates and the first destination.  
+            You can adjust cities and filters there.
+          </small>
+        </div>
+
+        <div class="actions">
+          <button id="generateBtn" class="btn">Generate Trip</button>
+          <button id="clearBtn" class="btn btn-outline">Clear</button>
+          <button id="resetPageBtn" class="btn btn-outline">Reset All</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="planner-side">
+      <div class="card-soft">
+        <h3 class="planner-heading">Suggested Road Trips</h3>
+        <ul class="pretty-list">
+          <li><button class="pill" data-template="provence">Provence Road Trip</button> – Lavender fields & hilltop towns</li>
+          <li><button class="pill" data-template="riviera">French Riviera Escape</button> – Nice, Cannes, Monaco</li>
+          <li><button class="pill" data-template="wine">Wine & Gastronomy Tour</button> – Vineyards & local markets</li>
+          <li><button class="pill" data-template="coast">Coastal Highlights</button> – Antibes, Cannes, Saint-Tropez</li>
+        </ul>
+        <small class="hint">Click a trip to auto-fill the planner.</small>
+      </div>
+
+      <div class="card-soft">
+        <h3 class="planner-heading">Tips</h3>
+        <ul class="pretty-list">
+          <li>Try <em>balanced pace</em> for 2–3 nights per stop.</li>
+          <li>Trains are great between Riviera cities; car is best for Provence villages.</li>
+          <li>Market days: Nice & Antibes daily (flowers/produce), Aix CP on Tue/Thu/Sat.</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <section class="itinerary">
+    <div class="it-header">
+      <h3>Your Generated Schedule</h3>
+      <div class="it-actions">
+        <button class="btn btn-outline" id="copyBtn" type="button">Copy</button>
+        <button class="btn btn-outline" id="printBtn" type="button">Print</button>
+      </div>
+    </div>
+    <div id="itineraryOutput" class="it-grid"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 South of France Guide</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
